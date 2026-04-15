@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Layout from '@/components/Layout'
 import { IMAGES } from '@/lib/images'
 
-// TODO: Replace with Angela's actual Calendly URLs
 const CALENDLY_DISCOVERY = 'https://calendly.com/angelawebbcoaching/discovery-call'
 const CALENDLY_SINGLE = 'https://calendly.com/angelawebbcoaching/single-session'
 const CALENDLY_PACKAGE = 'https://calendly.com/angelawebbcoaching/3-month-package'
@@ -11,7 +10,7 @@ const CALENDLY_PACKAGE = 'https://calendly.com/angelawebbcoaching/3-month-packag
 const offerings = [
   {
     image: IMAGES.carouselWater,
-    imageAlt: 'Scenic lake and mountains',
+    imageAlt: 'Peaceful lake and mountains',
     title: 'Free Discovery Call',
     subtitle: 'Take Your First Step',
     description:
@@ -21,8 +20,8 @@ const offerings = [
     href: CALENDLY_DISCOVERY,
   },
   {
-    image: IMAGES.carouselAmber,
-    imageAlt: 'Mountain landscape',
+    image: IMAGES.heroHalfdomeBottom,
+    imageAlt: 'Half Dome, Yosemite',
     title: 'Single Coaching Session',
     subtitle: 'A Focused Reset',
     description:
@@ -33,7 +32,7 @@ const offerings = [
   },
   {
     image: IMAGES.carouselCoast,
-    imageAlt: 'Coastal cabin in mountains',
+    imageAlt: 'Northern California coastline',
     title: '3 Month Coaching Package',
     subtitle: 'Deepening the Work',
     description:
@@ -52,7 +51,7 @@ export default function WorkWithMe() {
     >
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="relative h-[55vh] min-h-[400px] flex items-end justify-center">
+      <section className="relative h-[55vh] min-h-[380px]">
         <Image
           src={IMAGES.workWithMeHero}
           alt="Rocky coastline at sunset"
@@ -60,14 +59,14 @@ export default function WorkWithMe() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/50" />
-        <div className="relative z-10 text-center pb-14 px-6">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 text-center pb-12 px-6">
           <h1 className="font-serif text-white text-4xl md:text-6xl font-light">Work with Me</h1>
         </div>
       </section>
 
-      {/* ── INTRO ────────────────────────────────────────────────── */}
-      <section className="bg-plum py-16 text-center px-6">
+      {/* ── INTRO — plum ─────────────────────────────────────────── */}
+      <section className="bg-plum py-12 text-center px-6">
         <div className="max-w-2xl mx-auto">
           <h2 className="font-serif text-2xl md:text-3xl text-white font-light mb-4">
             Ways to Work Together
@@ -80,29 +79,30 @@ export default function WorkWithMe() {
         </div>
       </section>
 
-      {/* ── OFFERINGS ────────────────────────────────────────────── */}
-      <section className="bg-plum pb-20 px-6">
+      {/* ── OFFERING CARDS — plum background, white rounded cards ── */}
+      <section className="bg-plum pb-16 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {offerings.map(({ image, imageAlt, title, subtitle, description, detail, cta, href }) => (
-            <div key={title} className="bg-white flex flex-col overflow-hidden">
-              {/* Card image */}
-              <div className="relative h-56">
+            <div key={title} className="bg-white rounded-2xl overflow-hidden shadow-md flex flex-col">
+
+              {/* Card image — rounded top corners via parent overflow-hidden */}
+              <div className="relative h-52">
                 <Image src={image} alt={imageAlt} fill className="object-cover" />
               </div>
 
               {/* Card body */}
-              <div className="flex flex-col flex-grow p-8 text-center">
+              <div className="flex flex-col flex-grow p-7 text-center">
                 <h3 className="font-serif text-xl text-charcoal font-light mb-1">{title}</h3>
                 <p className="font-sans text-xs text-plum tracking-widest uppercase mb-4">{subtitle}</p>
                 <p className="font-sans text-sm text-charcoal/70 leading-relaxed mb-5 flex-grow">
                   {description}
                 </p>
-                <p className="font-sans text-sm text-charcoal font-medium mb-6">{detail}</p>
+                <p className="font-sans text-sm text-charcoal font-medium mb-5">{detail}</p>
                 <Link
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block border border-charcoal/30 text-charcoal font-sans text-sm tracking-wide px-6 py-3 hover:bg-charcoal hover:text-white transition-colors"
+                  className="inline-block bg-plum text-white font-sans text-sm tracking-wide px-6 py-3 rounded-full hover:bg-plum-dark transition-colors"
                 >
                   {cta}
                 </Link>
@@ -112,13 +112,13 @@ export default function WorkWithMe() {
         </div>
       </section>
 
-      {/* ── NOT SURE WHERE TO BEGIN ──────────────────────────────── */}
-      <section className="bg-white py-20 text-center px-6">
+      {/* ── NOT SURE WHERE TO BEGIN — brand blue ─────────────────── */}
+      <section className="bg-brand py-16 text-center px-6">
         <div className="max-w-xl mx-auto">
-          <h2 className="font-serif text-3xl text-charcoal font-light mb-4">
+          <h2 className="font-serif text-3xl text-white font-light mb-4">
             Not Sure Where to Begin?
           </h2>
-          <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-8">
+          <p className="font-sans text-base text-white/80 leading-relaxed mb-8">
             If you&apos;re curious but not certain which option is the best fit, start with a free
             discovery call. It&apos;s an easy first step — and we&apos;ll figure it out together.
           </p>
@@ -126,7 +126,7 @@ export default function WorkWithMe() {
             href={CALENDLY_DISCOVERY}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-plum text-white font-sans text-sm tracking-widest uppercase px-10 py-4 hover:bg-plum-dark transition-colors"
+            className="inline-block border border-white/60 text-white font-sans text-sm tracking-widest uppercase px-10 py-4 rounded-full hover:bg-white hover:text-brand transition-colors"
           >
             Book a Discovery Call
           </Link>
