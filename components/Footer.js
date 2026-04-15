@@ -2,23 +2,22 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { IMAGES } from '@/lib/images'
 
-// TODO: Replace with Angela's actual Calendly discovery call URL
 const CALENDLY_DISCOVERY = 'https://calendly.com/angelawebbcoaching/discovery-call'
 
 export default function Footer() {
   return (
     <footer className="bg-brand text-white">
-      <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="max-w-6xl mx-auto px-6 py-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
           {/* Martha Beck badge */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 opacity-90">
             <Image
               src={IMAGES.marthabeck}
               alt="Certified Wayfinder Life Coach – Martha Beck"
-              width={100}
-              height={100}
-              className="opacity-90"
+              width={90}
+              height={90}
+              className="rounded-full"
             />
           </div>
 
@@ -28,7 +27,7 @@ export default function Footer() {
               href={CALENDLY_DISCOVERY}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block border border-white/60 text-white font-sans text-sm tracking-wide px-8 py-3 hover:bg-white hover:text-brand transition-colors"
+              className="inline-block border border-white/60 text-white font-sans text-sm tracking-widest uppercase px-8 py-3 rounded-full hover:bg-white hover:text-brand transition-colors"
             >
               Contact me
             </Link>
