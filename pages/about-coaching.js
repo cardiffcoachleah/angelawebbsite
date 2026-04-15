@@ -13,23 +13,23 @@ export default function AboutCoaching() {
     >
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="relative h-[55vh] min-h-[400px] flex items-end justify-center">
+      <section className="relative h-[55vh] min-h-[380px]">
         <Image
           src={IMAGES.aboutCoachingHero}
-          alt="Garden flowers"
+          alt="Garden in bloom"
           fill
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/50" />
-        <div className="relative z-10 text-center pb-14 px-6">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 text-center pb-12 px-6">
           <h1 className="font-serif text-white text-4xl md:text-6xl font-light">About Coaching</h1>
         </div>
       </section>
 
-      {/* ── TWO COLUMNS: What is coaching / First session ────────── */}
-      <section className="bg-blue-DEFAULT py-20 md:py-28 text-white">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14">
+      {/* ── TWO COLUMNS — brand blue ──────────────────────────────── */}
+      <section className="bg-brand py-16 md:py-20 text-white">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
 
           <div>
             <h2 className="font-serif text-2xl md:text-3xl font-light mb-6">What is Coaching?</h2>
@@ -83,13 +83,31 @@ export default function AboutCoaching() {
             </p>
             <Link
               href="/work-with-me"
-              className="inline-block bg-white text-blue-DEFAULT font-sans text-sm tracking-widest uppercase px-8 py-3 hover:bg-silver transition-colors"
+              className="inline-block bg-white text-brand font-sans text-sm tracking-widest uppercase px-8 py-3 rounded-full hover:bg-silver transition-colors"
             >
               Work with Me
             </Link>
           </div>
 
         </div>
+      </section>
+
+      {/* ── CTA STRIP — plum ─────────────────────────────────────── */}
+      <section className="bg-plum py-14 text-center px-6">
+        <h2 className="font-serif text-white text-2xl md:text-3xl font-light mb-4">
+          Ready to take your first step?
+        </h2>
+        <p className="font-sans text-white/80 text-base mb-8 max-w-lg mx-auto">
+          A free 30-minute discovery call is a no-pressure way to see if we&apos;re a good fit.
+        </p>
+        <Link
+          href={CALENDLY_DISCOVERY}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block border border-white/60 text-white font-sans text-sm tracking-widest uppercase px-10 py-4 rounded-full hover:bg-white hover:text-plum transition-colors"
+        >
+          Book a Free Discovery Call
+        </Link>
       </section>
 
     </Layout>
