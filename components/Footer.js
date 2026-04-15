@@ -10,13 +10,13 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
-          {/* Martha Beck badge */}
-          <div className="flex-shrink-0 opacity-90">
+          {/* Martha Beck white badge — larger */}
+          <div className="flex-shrink-0">
             <Image
               src={IMAGES.marthabeck}
               alt="Certified Wayfinder Life Coach – Martha Beck"
-              width={90}
-              height={90}
+              width={130}
+              height={130}
               className="rounded-full"
             />
           </div>
