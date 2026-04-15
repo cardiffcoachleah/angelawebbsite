@@ -81,7 +81,7 @@ export default function WorkWithMe() {
         </div>
       </section>
 
-      {/* ── OFFERING CARDS — plum background, white rounded cards ── */}
+      {/* ── OFFERING CARDS ───────────────────────────────────────── */}
       <section className="bg-plum pb-16 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {offerings.map(({ image, imageAlt, title, subtitle, description, detail, cta, href }) => (
@@ -90,12 +90,12 @@ export default function WorkWithMe() {
                 <Image src={image} alt={imageAlt} fill className="object-cover" />
               </div>
               <div className="flex flex-col flex-grow p-7 text-center">
-                <h3 className="font-serif text-xl text-charcoal font-light mb-1">{title}</h3>
-                <p className="font-sans text-xs text-plum tracking-widest uppercase mb-4">{subtitle}</p>
+                <h3 className="font-serif text-xl text-plum font-light mb-1">{title}</h3>
+                <p className="font-sans text-xs text-brand tracking-widest uppercase mb-4">{subtitle}</p>
                 <p className="font-sans text-sm text-brand/80 leading-relaxed mb-5 flex-grow">
                   {description}
                 </p>
-                <p className="font-sans text-sm text-charcoal font-medium mb-5">{detail}</p>
+                <p className="font-sans text-sm text-plum font-medium mb-5">{detail}</p>
                 <Link
                   href={href}
                   target="_blank"
