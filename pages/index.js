@@ -19,7 +19,6 @@ export default function Home() {
     <Layout description="Coaching for people who are ready to trust themselves and move forward with clarity.">
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      {/* Gradient from top so sky fades, text sits on dark lower area */}
       <section className="relative h-[85vh] min-h-[560px]">
         <Image
           src={IMAGES.heroHalfdome}
@@ -29,8 +28,6 @@ export default function Home() {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
-
-        {/* Text anchored to bottom */}
         <div className="absolute bottom-0 left-0 right-0 text-center px-6 pb-16">
           <h1 className="font-serif text-white text-4xl md:text-6xl lg:text-7xl font-light leading-tight">
             What if being{' '}
@@ -42,7 +39,7 @@ export default function Home() {
               href={CALENDLY_DISCOVERY}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-white text-charcoal font-sans text-sm tracking-widest uppercase px-10 py-4 rounded-full hover:bg-silver transition-colors"
+              className="inline-block bg-white text-brand font-sans text-sm tracking-widest uppercase px-10 py-4 rounded-full hover:bg-silver transition-colors"
             >
               Book a Free Discovery Call
             </Link>
@@ -50,12 +47,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── INTRO — brand blue background ────────────────────────── */}
+      {/* ── INTRO — brand blue ────────────────────────────────────── */}
       <section className="bg-brand py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-14 items-center">
-
-            {/* Copy */}
             <div className="text-white">
               <p className="font-serif text-2xl md:text-3xl font-light leading-relaxed italic mb-8">
                 When I look back at the times in my life when I made bold,
@@ -75,8 +70,6 @@ export default function Home() {
                 And you take your next step, even if the whole path isn&apos;t visible yet.
               </p>
             </div>
-
-            {/* Headshot */}
             <div className="flex flex-col items-center gap-4">
               <div className="relative w-72 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden shadow-lg">
                 <Image
@@ -94,19 +87,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── COACHING FOR PEOPLE READY TO — light background ─────── */}
-      <section className="bg-silver/40 py-16 md:py-20">
+      {/* ── COACHING FOR PEOPLE READY TO — light, plum/brand text ── */}
+      <section className="bg-silver/30 py-16 md:py-20">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-charcoal font-light mb-3">
+          <h2 className="font-serif text-3xl md:text-4xl text-plum font-light mb-3">
             Coaching for people who are ready to&hellip;
           </h2>
           <div className="w-12 h-px bg-plum mx-auto mb-10" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 text-left max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left max-w-4xl mx-auto">
             {coachingReadyItems.map((item, i) => (
               <div key={i} className="flex items-start gap-3 bg-white rounded-2xl px-5 py-4 shadow-sm">
                 <span className="mt-1.5 w-2 h-2 rounded-full bg-plum flex-shrink-0" />
-                <p className="font-sans text-base text-charcoal/80 leading-snug">{item}</p>
+                <p className="font-sans text-base text-brand leading-snug">{item}</p>
               </div>
             ))}
           </div>
@@ -124,12 +117,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── STORY TEASER — plum background ───────────────────────── */}
+      {/* ── STORY TEASER — plum ───────────────────────────────────── */}
       <section className="bg-plum py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-
-            {/* Image */}
             <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
               <Image
                 src={IMAGES.heroHalfdomeBottom}
@@ -138,8 +129,6 @@ export default function Home() {
                 className="object-cover object-center"
               />
             </div>
-
-            {/* Copy */}
             <div className="text-white">
               <h2 className="font-serif text-3xl md:text-4xl font-light mb-5">
                 A Moment That Changed Everything
