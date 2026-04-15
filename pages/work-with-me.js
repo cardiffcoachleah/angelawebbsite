@@ -50,7 +50,7 @@ export default function WorkWithMe() {
       description="Coaching options with Angela Webb — from a free discovery call to a 3-month package."
     >
 
-      {/* ── HERO ─────────────────────────────────────────────────── */}
+      {/* ── HERO — title centred ──────────────────────────────────── */}
       <section className="relative h-[55vh] min-h-[380px]">
         <Image
           src={IMAGES.workWithMeHero}
@@ -59,9 +59,11 @@ export default function WorkWithMe() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 text-center pb-12 px-6">
-          <h1 className="font-serif text-white text-4xl md:text-6xl font-light">Work with Me</h1>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/60" />
+        <div className="absolute inset-0 flex items-center justify-center px-6">
+          <h1 className="font-serif text-white text-4xl md:text-6xl font-light text-center">
+            Work with Me
+          </h1>
         </div>
       </section>
 
@@ -84,17 +86,13 @@ export default function WorkWithMe() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {offerings.map(({ image, imageAlt, title, subtitle, description, detail, cta, href }) => (
             <div key={title} className="bg-white rounded-2xl overflow-hidden shadow-md flex flex-col">
-
-              {/* Card image — rounded top corners via parent overflow-hidden */}
               <div className="relative h-52">
                 <Image src={image} alt={imageAlt} fill className="object-cover" />
               </div>
-
-              {/* Card body */}
               <div className="flex flex-col flex-grow p-7 text-center">
                 <h3 className="font-serif text-xl text-charcoal font-light mb-1">{title}</h3>
                 <p className="font-sans text-xs text-plum tracking-widest uppercase mb-4">{subtitle}</p>
-                <p className="font-sans text-sm text-charcoal/70 leading-relaxed mb-5 flex-grow">
+                <p className="font-sans text-sm text-brand/80 leading-relaxed mb-5 flex-grow">
                   {description}
                 </p>
                 <p className="font-sans text-sm text-charcoal font-medium mb-5">{detail}</p>
@@ -112,7 +110,7 @@ export default function WorkWithMe() {
         </div>
       </section>
 
-      {/* ── NOT SURE WHERE TO BEGIN — brand blue ─────────────────── */}
+      {/* ── NOT SURE — brand blue ─────────────────────────────────── */}
       <section className="bg-brand py-16 text-center px-6">
         <div className="max-w-xl mx-auto">
           <h2 className="font-serif text-3xl text-white font-light mb-4">
