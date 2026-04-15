@@ -1,8 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import { IMAGES } from '@/lib/images'
 
 const navLinks = [
   { href: '/', label: 'Welcome' },
@@ -22,19 +20,14 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <Image
-            src={IMAGES.logo}
-            alt="Angela Webb Coaching"
-            width={160}
-            height={65}
-            className="h-14 w-auto"
-            priority
-            onError={(e) => { e.target.style.display = 'none' }}
-          />
-          <span className="font-serif text-xl text-plum sr-only">Angela Webb Coaching</span>
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+
+        {/* Logo — styled text until logo image is uploaded to public/ */}
+        <Link href="/" className="flex items-center gap-3">
+          <span className="font-serif text-3xl font-semibold text-plum leading-none">AW</span>
+          <span className="font-sans text-xs tracking-[0.15em] text-brand uppercase leading-tight">
+            Angela Webb<br />Coaching
+          </span>
         </Link>
 
         {/* Desktop nav */}
