@@ -12,7 +12,7 @@ export default function AboutCoaching() {
       description="What coaching is, how it works, and what to expect in your first session with Angela Webb."
     >
 
-      {/* ── HERO ─────────────────────────────────────────────────── */}
+      {/* ── HERO — title centred ──────────────────────────────────── */}
       <section className="relative h-[55vh] min-h-[380px]">
         <Image
           src={IMAGES.aboutCoachingHero}
@@ -21,9 +21,11 @@ export default function AboutCoaching() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 text-center pb-12 px-6">
-          <h1 className="font-serif text-white text-4xl md:text-6xl font-light">About Coaching</h1>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/60" />
+        <div className="absolute inset-0 flex items-center justify-center px-6">
+          <h1 className="font-serif text-white text-4xl md:text-6xl font-light text-center">
+            About Coaching
+          </h1>
         </div>
       </section>
 
@@ -92,7 +94,7 @@ export default function AboutCoaching() {
         </div>
       </section>
 
-      {/* ── CTA STRIP — plum ─────────────────────────────────────── */}
+      {/* ── CTA — plum ───────────────────────────────────────────── */}
       <section className="bg-plum py-14 text-center px-6">
         <h2 className="font-serif text-white text-2xl md:text-3xl font-light mb-4">
           Ready to take your first step?
