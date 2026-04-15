@@ -32,7 +32,9 @@ export default function Navbar() {
             height={65}
             className="h-14 w-auto"
             priority
+            onError={(e) => { e.target.style.display = 'none' }}
           />
+          <span className="font-serif text-xl text-plum sr-only">Angela Webb Coaching</span>
         </Link>
 
         {/* Desktop nav */}
@@ -44,7 +46,7 @@ export default function Navbar() {
               className={`font-sans text-sm tracking-wide transition-colors pb-0.5 ${
                 isActive(href)
                   ? 'text-plum border-b border-plum'
-                  : 'text-charcoal hover:text-blue'
+                  : 'text-charcoal hover:text-brand'
               }`}
             >
               {label}
