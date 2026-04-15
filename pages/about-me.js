@@ -5,6 +5,15 @@ import { IMAGES } from '@/lib/images'
 
 const CALENDLY_DISCOVERY = 'https://calendly.com/angelawebbcoaching/discovery-call'
 
+const aboutItems = [
+  'Mother of 3 sons',
+  'Lifelong learner — classes, workshops, podcasts, books',
+  'Part of a strong coaching community',
+  'Loves walking, hiking, Pvolve, and Pilates',
+  'Feels most grounded at the beach',
+  'Obsessed with coffee ☕',
+]
+
 export default function AboutMe() {
   return (
     <Layout
@@ -12,8 +21,8 @@ export default function AboutMe() {
       description="Angela Webb's story — from saying no to a full-body yes, and how Half Dome changed everything."
     >
 
-      {/* ── HERO with Martha Beck quote overlaid ─────────────────── */}
-      <section className="relative h-[65vh] min-h-[420px]">
+      {/* ── HERO: Martha Beck quote overlaid, no title label ─────── */}
+      <section className="relative h-[55vh] min-h-[380px]">
         <Image
           src={IMAGES.aboutMeTreesHero}
           alt="Redwood trees"
@@ -21,23 +30,16 @@ export default function AboutMe() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/65" />
-
-        {/* Quote centred on image */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/35 to-black/60" />
+        <div className="absolute inset-0 flex items-center justify-center px-6 text-center">
           <blockquote className="max-w-3xl">
             <p className="font-serif text-white text-2xl md:text-4xl italic font-light leading-relaxed">
               &ldquo;To be in integrity is to be one thing, whole and undivided.&rdquo;
             </p>
-            <cite className="block font-sans text-white/70 text-sm mt-4 not-italic tracking-widest uppercase">
+            <cite className="block font-sans text-white/70 text-sm mt-5 not-italic tracking-widest uppercase">
               — Martha Beck
             </cite>
           </blockquote>
-        </div>
-
-        {/* Page title at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 text-center pb-8 px-6">
-          <p className="font-sans text-white/60 text-sm tracking-widest uppercase">About Me</p>
         </div>
       </section>
 
@@ -49,13 +51,13 @@ export default function AboutMe() {
         </p>
       </section>
 
-      {/* ── STORY PART 1 — white, soccer photo balanced ───────────── */}
+      {/* ── STORY PART 1 — white, soccer photo portrait ───────────── */}
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-5 gap-12 items-start">
 
-            {/* Soccer photo — explicit height, rounded */}
-            <div className="relative h-80 rounded-2xl overflow-hidden shadow-md">
+            {/* Soccer photo — 2/5 width, tall portrait */}
+            <div className="md:col-span-2 relative h-[420px] rounded-2xl overflow-hidden shadow-md">
               <Image
                 src={IMAGES.aboutMeSoccer}
                 alt="Young Angela playing soccer"
@@ -64,7 +66,8 @@ export default function AboutMe() {
               />
             </div>
 
-            <div>
+            {/* Text — 3/5 width */}
+            <div className="md:col-span-3 md:pt-4">
               <h2 className="font-serif text-2xl md:text-3xl text-charcoal font-light mb-6">
                 When I was young, I was{' '}
                 <em className="italic">full of myself</em>{' '}
@@ -114,8 +117,8 @@ export default function AboutMe() {
               </p>
             </div>
 
-            {/* Hiking photo — explicit height */}
-            <div className="relative h-80 rounded-2xl overflow-hidden shadow-md order-1 md:order-2">
+            {/* Hiking photo — explicit h-80 */}
+            <div className="relative h-80 w-full rounded-2xl overflow-hidden shadow-md order-1 md:order-2">
               <Image
                 src={IMAGES.aboutMeHiking}
                 alt="Angela hiking near Yosemite"
@@ -132,8 +135,8 @@ export default function AboutMe() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
 
-            {/* Beach headshot — explicit height */}
-            <div className="relative h-80 rounded-2xl overflow-hidden shadow-md">
+            {/* Beach headshot — explicit h-80 */}
+            <div className="relative h-80 w-full rounded-2xl overflow-hidden shadow-md">
               <Image
                 src={IMAGES.aboutMeHeadshot}
                 alt="Angela Webb at the beach"
@@ -168,37 +171,39 @@ export default function AboutMe() {
         </div>
       </section>
 
-      {/* ── A BIT MORE ABOUT ME ──────────────────────────────────── */}
-      <section className="bg-white py-14 text-center px-6">
-        <h3 className="font-serif text-2xl text-charcoal font-light mb-8">A bit more about me</h3>
-        <ul className="font-sans text-base text-charcoal/70 space-y-2 max-w-sm mx-auto">
-          {[
-            'Mother of 3 sons',
-            'Lifelong learner — classes, workshops, podcasts, books',
-            'Part of a strong coaching community',
-            'Loves walking, hiking, Pvolve, and Pilates',
-            'Feels most grounded at the beach',
-            'Obsessed with coffee ☕',
-          ].map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
+      {/* ── A BIT MORE ABOUT ME — brand blue, 2-col grid ─────────── */}
+      <section className="bg-brand py-14 px-6">
+        <div className="max-w-2xl mx-auto text-center">
+          <h3 className="font-serif text-white text-2xl font-light mb-10">A bit more about me</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+            {aboutItems.map((item, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-white/50 flex-shrink-0" />
+                <p className="font-sans text-white/80 text-sm leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
-      {/* ── PHOTO STRIP ──────────────────────────────────────────── */}
+      {/* ── PHOTO STRIP — 5 images, tailored crops ───────────────── */}
       <section>
         <div className="grid grid-cols-5 gap-0">
-          {[
-            { src: IMAGES.carouselWater, alt: 'Scenic water' },
-            { src: IMAGES.carouselCoffee, alt: 'Coffee' },
-            { src: IMAGES.carouselAmber, alt: 'Landscape' },
-            { src: IMAGES.carouselCoast, alt: 'Coastline' },
-            { src: IMAGES.carouselHiking, alt: 'Hiking' },
-          ].map(({ src, alt }, i) => (
-            <div key={i} className="relative h-48 md:h-64">
-              <Image src={src} alt={alt} fill className="object-cover" />
-            </div>
-          ))}
+          <div className="relative h-48 md:h-64">
+            <Image src={IMAGES.carouselWater} alt="Scenic water" fill className="object-cover object-center" />
+          </div>
+          <div className="relative h-48 md:h-64">
+            <Image src={IMAGES.carouselCoffee} alt="Coffee" fill className="object-cover object-center" />
+          </div>
+          <div className="relative h-48 md:h-64">
+            <Image src={IMAGES.carouselAmber} alt="Landscape" fill className="object-cover object-center" />
+          </div>
+          <div className="relative h-48 md:h-64">
+            <Image src={IMAGES.carouselCoast} alt="Coastline" fill className="object-cover object-bottom" />
+          </div>
+          <div className="relative h-48 md:h-64">
+            <Image src={IMAGES.carouselHiking} alt="Hiking" fill className="object-cover object-center" />
+          </div>
         </div>
       </section>
 
