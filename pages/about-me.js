@@ -12,8 +12,8 @@ export default function AboutMe() {
       description="Angela Webb's story — from saying no to a full-body yes, and how Half Dome changed everything."
     >
 
-      {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="relative h-[55vh] min-h-[380px]">
+      {/* ── HERO with Martha Beck quote overlaid ─────────────────── */}
+      <section className="relative h-[65vh] min-h-[420px]">
         <Image
           src={IMAGES.aboutMeTreesHero}
           alt="Redwood trees"
@@ -21,22 +21,24 @@ export default function AboutMe() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 text-center pb-12 px-6">
-          <h1 className="font-serif text-white text-4xl md:text-6xl font-light">About Me</h1>
-        </div>
-      </section>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/65" />
 
-      {/* ── PULL QUOTE — plum, directly after hero ───────────────── */}
-      <section className="bg-plum py-12 text-center px-6">
-        <blockquote className="max-w-3xl mx-auto">
-          <p className="font-serif text-white text-2xl md:text-3xl italic font-light leading-relaxed">
-            &ldquo;To be in integrity is to be one thing, whole and undivided.&rdquo;
-          </p>
-          <cite className="block font-sans text-white/60 text-sm mt-4 not-italic tracking-widest uppercase">
-            — Martha Beck
-          </cite>
-        </blockquote>
+        {/* Quote centred on image */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+          <blockquote className="max-w-3xl">
+            <p className="font-serif text-white text-2xl md:text-4xl italic font-light leading-relaxed">
+              &ldquo;To be in integrity is to be one thing, whole and undivided.&rdquo;
+            </p>
+            <cite className="block font-sans text-white/70 text-sm mt-4 not-italic tracking-widest uppercase">
+              — Martha Beck
+            </cite>
+          </blockquote>
+        </div>
+
+        {/* Page title at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 text-center pb-8 px-6">
+          <p className="font-sans text-white/60 text-sm tracking-widest uppercase">About Me</p>
+        </div>
       </section>
 
       {/* ── INTRO HOOK — brand blue ───────────────────────────────── */}
@@ -47,13 +49,13 @@ export default function AboutMe() {
         </p>
       </section>
 
-      {/* ── STORY PART 1 — white, soccer photo full height ───────── */}
+      {/* ── STORY PART 1 — white, soccer photo balanced ───────────── */}
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
 
-            {/* Soccer photo — full portrait, rounded */}
-            <div className="relative w-full rounded-2xl overflow-hidden shadow-md" style={{ aspectRatio: '3/4' }}>
+            {/* Soccer photo — explicit height, rounded */}
+            <div className="relative h-80 rounded-2xl overflow-hidden shadow-md">
               <Image
                 src={IMAGES.aboutMeSoccer}
                 alt="Young Angela playing soccer"
@@ -62,7 +64,7 @@ export default function AboutMe() {
               />
             </div>
 
-            <div className="md:pt-6">
+            <div>
               <h2 className="font-serif text-2xl md:text-3xl text-charcoal font-light mb-6">
                 When I was young, I was{' '}
                 <em className="italic">full of myself</em>{' '}
@@ -90,9 +92,9 @@ export default function AboutMe() {
       {/* ── STORY PART 2 — brand blue, hiking photo ──────────────── */}
       <section className="bg-brand py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
 
-            <div className="text-white md:pt-6 order-2 md:order-1">
+            <div className="text-white order-2 md:order-1">
               <h2 className="font-serif text-2xl md:text-3xl font-light mb-6">
                 That one &ldquo;yes&rdquo; led to an unforgettable experience.
               </h2>
@@ -112,8 +114,8 @@ export default function AboutMe() {
               </p>
             </div>
 
-            {/* Hiking photo */}
-            <div className="relative w-full rounded-2xl overflow-hidden shadow-md order-1 md:order-2" style={{ aspectRatio: '3/4' }}>
+            {/* Hiking photo — explicit height */}
+            <div className="relative h-80 rounded-2xl overflow-hidden shadow-md order-1 md:order-2">
               <Image
                 src={IMAGES.aboutMeHiking}
                 alt="Angela hiking near Yosemite"
@@ -125,12 +127,13 @@ export default function AboutMe() {
         </div>
       </section>
 
-      {/* ── INSIGHT — plum, beach photo ──────────────────────────── */}
+      {/* ── INSIGHT — plum, beach headshot ───────────────────────── */}
       <section className="bg-plum py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
 
-            <div className="relative w-full rounded-2xl overflow-hidden shadow-md" style={{ aspectRatio: '3/4' }}>
+            {/* Beach headshot — explicit height */}
+            <div className="relative h-80 rounded-2xl overflow-hidden shadow-md">
               <Image
                 src={IMAGES.aboutMeHeadshot}
                 alt="Angela Webb at the beach"
@@ -161,12 +164,11 @@ export default function AboutMe() {
                 Book a Free Discovery Call
               </Link>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* ── A BIT MORE ABOUT ME — white, centered ────────────────── */}
+      {/* ── A BIT MORE ABOUT ME ──────────────────────────────────── */}
       <section className="bg-white py-14 text-center px-6">
         <h3 className="font-serif text-2xl text-charcoal font-light mb-8">A bit more about me</h3>
         <ul className="font-sans text-base text-charcoal/70 space-y-2 max-w-sm mx-auto">
