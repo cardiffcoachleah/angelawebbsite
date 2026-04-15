@@ -1,6 +1,8 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
+import { IMAGES } from '@/lib/images'
 
 const navLinks = [
   { href: '/', label: 'Welcome' },
@@ -20,14 +22,18 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
 
-        {/* Logo — styled text until logo image is uploaded to public/ */}
-        <Link href="/" className="flex items-center gap-3">
-          <span className="font-serif text-3xl font-semibold text-plum leading-none">AW</span>
-          <span className="font-sans text-xs tracking-[0.15em] text-brand uppercase leading-tight">
-            Angela Webb<br />Coaching
-          </span>
+        {/* Logo image */}
+        <Link href="/" className="flex items-center">
+          <Image
+            src={IMAGES.logo}
+            alt="Angela Webb Coaching"
+            width={220}
+            height={80}
+            className="h-16 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -39,7 +45,7 @@ export default function Navbar() {
               className={`font-sans text-sm tracking-wide transition-colors pb-0.5 ${
                 isActive(href)
                   ? 'text-plum border-b border-plum'
-                  : 'text-charcoal hover:text-brand'
+                  : 'text-brand hover:text-plum'
               }`}
             >
               {label}
@@ -49,7 +55,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-charcoal p-2"
+          className="md:hidden text-brand p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -71,7 +77,7 @@ export default function Navbar() {
               key={href}
               href={href}
               className={`font-sans text-sm tracking-wide ${
-                isActive(href) ? 'text-plum' : 'text-charcoal'
+                isActive(href) ? 'text-plum' : 'text-brand'
               }`}
               onClick={() => setMenuOpen(false)}
             >
