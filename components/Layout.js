@@ -22,6 +22,8 @@ export default function Layout({ children, title, description }) {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">{children}</main>
+        {/* Plum dividing line before footer */}
+        <div className="h-0.5 bg-plum/40" />
         <Footer />
       </div>
     </>
