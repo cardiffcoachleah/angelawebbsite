@@ -25,7 +25,7 @@ export default function Home() {
           src={IMAGES.heroHalfdome}
           alt="Half Dome, Yosemite"
           fill
-          className="object-cover object-bottom"
+          className="object-cover object-center"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
