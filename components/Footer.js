@@ -7,7 +7,7 @@ const CALENDLY_DISCOVERY = 'https://calendly.com/angelawebbcoaching/discovery-ca
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-DEFAULT text-white">
+    <footer className="bg-brand text-white">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
@@ -28,7 +28,7 @@ export default function Footer() {
               href={CALENDLY_DISCOVERY}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block border border-white/60 text-white font-sans text-sm tracking-wide px-8 py-3 hover:bg-white hover:text-blue-DEFAULT transition-colors"
+              className="inline-block border border-white/60 text-white font-sans text-sm tracking-wide px-8 py-3 hover:bg-white hover:text-brand transition-colors"
             >
               Contact me
             </Link>
