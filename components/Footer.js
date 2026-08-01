@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { IMAGES } from '@/lib/images'
 
-const CALENDLY_DISCOVERY = 'https://calendly.com/angela_webb/free_discovery_call'
 
 export default function Footer() {
   return (
@@ -24,12 +23,11 @@ export default function Footer() {
           {/* Centre: contact link */}
           <div className="text-center">
             <Link
-              href={CALENDLY_DISCOVERY}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:angela@angelawebbcoaching.com"
               className="inline-block border border-white/60 text-white font-sans text-sm tracking-widest uppercase px-8 py-3 rounded-full hover:bg-white hover:text-brand transition-colors"
             >
               Contact me
+
             </Link>
           </div>
 
