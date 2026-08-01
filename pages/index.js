@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Layout from '@/components/Layout'
 import { IMAGES } from '@/lib/images'
 
-const CALENDLY_DISCOVERY = 'https://calendly.com/angelawebbcoaching/discovery-call'
+const CALENDLY_DISCOVERY = 'https://calendly.com/angela_webb/free_discovery_call'
 
 const coachingReadyItems = [
   'Trust themselves',
