@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { IMAGES } from '@/lib/images'
 
-const CALENDLY_DISCOVERY = 'https://calendly.com/angelawebbcoaching/discovery-call'
+const CALENDLY_DISCOVERY = 'https://calendly.com/angela_webb/free_discovery_call'
 
 export default function Footer() {
   return (
