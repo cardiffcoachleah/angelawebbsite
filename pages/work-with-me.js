@@ -3,9 +3,9 @@ import Link from 'next/link'
 import Layout from '@/components/Layout'
 import { IMAGES } from '@/lib/images'
 
-const CALENDLY_DISCOVERY = 'https://calendly.com/angelawebbcoaching/discovery-call'
-const CALENDLY_SINGLE = 'https://calendly.com/angelawebbcoaching/single-session'
-const CALENDLY_PACKAGE = 'https://calendly.com/angelawebbcoaching/3-month-package'
+const CALENDLY_DISCOVERY = 'https://calendly.com/angela_webb/free_discovery_call'
+const CALENDLY_SINGLE = 'https://calendly.com/angela_webb/single-coaching-session'
+const CALENDLY_PACKAGE = 'https://calendly.com/angela_webb/3-month-package'
 
 const offerings = [
   {
